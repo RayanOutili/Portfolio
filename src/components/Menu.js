@@ -4,7 +4,7 @@ import "../styles/nav.css";
 import "../styles/index.css";
 import { Link } from 'react-router-dom';
 
-const Menu = ({ toggleDarkMode }) => {
+const Menu = ({ toggleDarkMode, isDarkMode }) => {
 	return (
 		<>
 			<nav id="menu" className='bg-[var(--background-menu-color)] flex z-50 items-center justify-between fixed top-0 left-0 w-[100%] h-20 p-7 pl-10 pr-20 shadow-md'>
@@ -14,7 +14,10 @@ const Menu = ({ toggleDarkMode }) => {
 						<Link to="/Home">Accueil</Link>
 					</li>
 					<li>
-						<Link to="/About">APropos</Link>
+						<Link to="/About">À propos</Link>
+					</li>
+					<li>
+						<Link to="/Experiences">Expériences</Link>
 					</li>
 					<li>
 						<Link to="/Projects">Projets</Link>
@@ -22,11 +25,16 @@ const Menu = ({ toggleDarkMode }) => {
 					<li>
 						<Link to="/Footer">Contact</Link>
 					</li>
+					<li>
+						<button type="button" className="theme-toggle link" onClick={toggleDarkMode} aria-label={isDarkMode ? "Passer en mode clair" : "Passer en mode sombre"}>
+							{isDarkMode ? "☀︎" : "☾"}
+						</button>
+					</li>
 				</ul>
 			</nav>
 			<div id="contact-left">
 				<div id="contact-left-links">
-					<a className="hover:text-slate-300 hover:animate-pulse hover:scale-125 transition-all duration-300" href="https://www.linkedin.com/in/rayan-outili-8327b024a/" target="_blank" rel="noreferrer">
+					<a className="hover:text-slate-300 hover:animate-pulse hover:scale-125 transition-all duration-300" href="https://www.linkedin.com/in/rayan-outili/" target="_blank" rel="noreferrer">
 						<svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
 					</a>
 					<a className="hover:text-slate-300 hover:animate-pulse hover:scale-125 transition-all duration-300" href="https://www.github.com/RayanOUTILI" target="_blank" rel="noreferrer">

@@ -18,6 +18,39 @@ import java from "../assets/icons/java.png";
 import php from "../assets/icons/php.png";
 import sql from "../assets/icons/sql.png";
 import reseausocial from "../assets/img/reseau_social.png";
+import useReveal from "../useReveal";
+
+// projets récents (Polytech) : pas de site en ligne, vignette avec la stack
+const recentProjectsData = [
+    {
+        title: "LetsGoBiking",
+        description: "Calculateur d'itinéraires vélo et marche basé sur l'API JCDecaux : services .NET auto-hébergés (proxy, cache, routeur) qui communiquent par message broker.",
+        githubUrl: "https://github.com/RayanOUTILI/LetsGoBiking",
+        stack: "cs,dotnet",
+        tags: ["C#", ".NET", "ActiveMQ", "Systèmes distribués"]
+    },
+    {
+        title: "SophiaEats",
+        description: "Plateforme de commande de repas développée en équipe de 5. Rôle : qualité et support Product Owner (stratégie de tests, user stories, suivi en Kanban).",
+        githubUrl: "https://github.com/RayanOUTILI/pns-ste-25-26-team-g-1",
+        stack: "java,angular",
+        tags: ["Java 21", "Angular", "Maven", "Scrum"]
+    },
+    {
+        title: "Jeu de Nim",
+        description: "Application web où l'on joue au Nim contre une IA qui apprend par renforcement. API documentée, conteneurisée avec Docker Compose.",
+        githubUrl: "https://github.com/RayanOUTILI/pns-algo2-terranumerica",
+        stack: "js,docker",
+        tags: ["JavaScript", "Docker", "Apprentissage par renforcement"]
+    },
+    {
+        title: "Ticket to Ride",
+        description: "Adaptation des Aventuriers du Rail en Java, avec des bots aux stratégies différentes comparés sur 2 000 parties simulées.",
+        githubUrl: "https://github.com/RayanOUTILI/TicketToRide",
+        stack: "java,maven",
+        tags: ["Java", "Maven", "IA de jeu"]
+    }
+];
 
 const projectsData = [
     {
@@ -51,7 +84,7 @@ const projectsData = [
     },
     {
         title: "Portfolio",
-        description: "Mon Portfolio développé en ReactJS et Tailwind.",
+        description: "Ce portfolio, développé en React et Tailwind.",
         url: "https://rayan-outili.fr",
         githubUrl: "https://github.com/RayanOUTILI/Portfolio",
         techno: [react, tailwind]
@@ -91,19 +124,50 @@ const NoIframeProjectsData = [
 ]
 
 const Projects = () => {
+    useReveal();
+
     return (
         <section id="projets">
             {/* f9f9f9 */}
             <div className="projets-conteneur bg-[white]">
                 <div className="padleft mt-20">
                     <h1 className="title-trait text-4xl font-bold text-left ml-14 mt-24 pt-4 mb-2">Projets</h1>
+                    {recentProjectsData.map((project, index) => (
+                        <div key={index} className={`reveal proj flex items-center border rounded-3xl gap-[5%] w-[60%] mt-[2%] m-auto bg-white`}>
+                            {/* Partie gauche (vignette) */}
+                            <div className="gauche w-65% relative">
+                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                    <div className="proj-visual">
+                                        <img src={`https://skillicons.dev/icons?i=${project.stack}`} alt={project.tags.join(", ")} />
+                                    </div>
+                                </a>
+                            </div>
+
+                            {/* Partie droite (titre, descri, techno, liens) */}
+                            <div className="droite w-40%">
+                                <h2 className="text-2xl font-bold">{project.title}</h2>
+                                <p className="text-gray-600 mt-2 justify-center flex items-center">{project.description}</p>
+                                <div className="xp-tags">
+                                    {project.tags.map(tag => <span key={tag}>{tag}</span>)}
+                                </div>
+                                <div className="mt-6 flex items-center justify-start gap-4">
+                                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="link flex items-center">
+                                        <img src={code} alt="code-icon" className="w-4 h-4 mr-1" />
+                                        Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+
+                    <h2 className="projets-sous-titre">Projets IUT et personnels</h2>
                     {projectsData.map((project, index) => (
                         //revealxINDEX pour alterner les anim revealx${index+1}
                         <div key={index} className={`reveal proj flex items-center border rounded-3xl gap-[5%] w-[60%] mt-[2%] m-auto bg-white`}>
                             {/* Partie gauche (iframe) */}
                             <div className="gauche w-65% relative">
                                 <a href={project.url} target="_blank" rel="noopener noreferrer">
-                                    <iframe id="iframe" title={project.title} className="iframe w-[40vw] h-[40vh] m-[3%]" src={project.url} alt={project.title} />
+                                    <iframe id="iframe" loading="lazy" title={project.title} className="iframe w-[40vw] h-[40vh] m-[3%]" src={project.url} alt={project.title} />
                                 </a>
                             </div>
 

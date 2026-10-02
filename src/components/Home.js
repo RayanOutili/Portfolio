@@ -16,9 +16,10 @@ const Home = () => {
                             <div className='main-content'>
                                 <h2>Rayan Outili</h2>
                                 <h1>Bienvenue sur mon portfolio 👋 </h1>
-                                <p>Étudiant en informatique à l'Université Côte d'Azur.</p>
+                                <p>Étudiant ingénieur logiciel à Polytech Nice Sophia, en alternance chez PRO BTP, et en double diplôme de management (MAE) à l'IAE Nice.</p>
+                                <p className="mt-2 text-gray-600">Conception d'architecture logicielle, services REST, microservices.</p>
                                 <span className="flex gap-4 mt-4">
-                                    <a aria-label="linkedin" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/rayan-outili-8327b024a/">
+                                    <a aria-label="linkedin" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/rayan-outili/">
                                         <img className="w-10 h-10" src={lk} alt="LinkedIn Icon" />
                                     </a>
                                     <a aria-label="github" rel="noreferrer" target="_blank" href="https://github.com/RayanOUTILI">
@@ -26,9 +27,6 @@ const Home = () => {
                                     </a>
                                 </span>
                             </div>
-                            {/* <div className='main-content-right'>
-                                <h2>🚧&nbsp;En cours de développement&nbsp;!&nbsp;🚧</h2>
-                            </div> */}
 
 
                             {/* stacks */}
@@ -38,13 +36,13 @@ const Home = () => {
                                 </p>
                                 <ul className='flex items-center justify-center gap-12 list-none'>
                                     <li>
-                                        <img src="https://skillicons.dev/icons?i=html,css" alt="HTML CSS Icons" />
+                                        <img src="https://skillicons.dev/icons?i=java,spring" alt="Java Spring Icons" />
                                     </li>
                                     <li>
-                                        <img src="https://skillicons.dev/icons?i=js,ts" alt="JavaScript TypeScript Icons" />
+                                        <img src="https://skillicons.dev/icons?i=angular,ts" alt="Angular TypeScript Icons" />
                                     </li>
                                     <li>
-                                        <img src="https://skillicons.dev/icons?i=react,angular" alt="React Angular Icons" />
+                                        <img src="https://skillicons.dev/icons?i=docker,kubernetes" alt="Docker Kubernetes Icons" />
                                     </li>
                                 </ul>
                             </div>

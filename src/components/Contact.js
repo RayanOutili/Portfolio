@@ -8,6 +8,8 @@ const Contact = () => {
             <div className="block" id="contact">
                 <p className="text-center mt-6 text-xl">N'hésitez pas à <a href="mailto:rayan.outili@gmail.com" className='underline'>me contacter</a> pour plus d'informations !</p>
                 <form action="https://formsubmit.co/rayan.outili@gmail.com" method='POST' id="contact-block">
+                    <input type="hidden" name="_subject" value="Nouveau message depuis rayan-outili.fr" />
+                    <input type="hidden" name="_template" value="table" />
                     <div className="contact-input">
                         <label htmlFor="name">Nom</label>
                         <input type="text" name="name" required />

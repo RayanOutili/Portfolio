@@ -87,3 +87,23 @@ nav>ul>li>a:hover::before {
     fill: #000;
     transition: all .3s;
 }
+/* mobile : 5 entrées de menu sur une ligne */
+@media screen and (max-width: 700px) {
+    nav>h1 {
+        display: none;
+    }
+
+    nav>ul {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0 !important;
+    }
+
+    nav>ul>li {
+        margin-left: 0 !important;
+    }
+
+    nav>ul>li>a {
+        font-size: 0.8rem;
+    }
+}
