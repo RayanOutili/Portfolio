@@ -910,6 +910,115 @@ code {
   }
 }
 
+.projets-sous-titre-premier {
+  margin-top: 2rem;
+}
+
+/* projets perso en ligne : grande carte avec le texte à gauche et les écrans à droite */
+.feat {
+  position: relative;
+  width: 60%;
+  margin: 1rem auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .08);
+  overflow: hidden;
+}
+
+.feat-screens {
+  background: #fff3dc;
+}
+
+.feat-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #111;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+}
+
+.feat h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0.8rem 0 0.4rem;
+  color: #111;
+}
+
+.feat p {
+  color: #4b5563;
+}
+
+.feat-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.4rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.feat-btn {
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  box-shadow: inset 0 0 0 1px currentColor;
+  color: #111;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: transform .15s;
+}
+
+.feat-btn:hover {
+  transform: translateY(-1px);
+}
+
+.feat-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dark-mode .feat {
+  background: var(--surface);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.dark-mode .feat-screens {
+  background: #2a2419;
+}
+
+.dark-mode .feat h2,
+.dark-mode .feat-btn {
+  color: var(--text-color);
+}
+
+.dark-mode .feat-tag {
+  background: var(--text-color);
+  color: #121214;
+}
+
+.dark-mode .feat p,
+.dark-mode .feat-actions {
+  color: var(--muted);
+}
+
+@media screen and (max-width: 1000px) {
+  .feat {
+    width: 90%;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.5rem;
+  }
+}
+
 /* mobile : timeline sur une seule colonne */
 @media screen and (max-width: 700px) {
   .timeline::before,
