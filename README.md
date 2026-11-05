@@ -17,6 +17,14 @@ npm start
 npm run deploy
 ```
 
+Pendant la refonte le site affiche la page simple du dossier `travaux/`
+
+```bash
+npm run deploy:travaux
+```
+
+L'ancienne version du portfolio est gardée dans la release `v1.0`
+
 ![image](https://github.com/RayanOUTILI/Portfolio/assets/59539437/54bac067-c762-46b1-9b6d-84ceea4e7e91)
 
 ![image](https://github.com/RayanOUTILI/Portfolio/assets/59539437/4b1671e4-8a03-443a-bebc-c9ee47faabea)

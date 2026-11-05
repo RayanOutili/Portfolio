@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rayan Outili · portfolio en travaux</title>
+    <meta name="description" content="Élève ingénieur logiciel à Polytech Nice Sophia. Portfolio en refonte." />
+    <link rel="icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ink: #111;
+        --soft: #4b5563;
+        --muted: #6b7280;
+        --bg: #f6f6f4;
+        --card: #fff;
+        --cream: #fff3dc;
+        --sky: #b8effa;
+        --line: #e5e7eb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #ececee;
+          --soft: #a1a1aa;
+          --muted: #a1a1aa;
+          --bg: #121214;
+          --card: #1c1c20;
+          --cream: #2a2419;
+          --sky: #0e3a47;
+          --line: #2c2c32;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 400 16px/1.55 Poppins, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        max-width: 1040px;
+        margin: auto;
+        padding: 0 20px 60px;
+      }
+
+      /* le ruban des travaux en haut de page */
+      .tape {
+        height: 12px;
+        background: repeating-linear-gradient(-45deg, #f5c518 0 14px, #111 14px 28px);
+      }
+
+      header {
+        padding: clamp(50px, 9vw, 110px) 0 clamp(40px, 6vw, 70px);
+      }
+
+
+
+      h1 {
+        font-size: clamp(42px, 7vw, 78px);
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+        font-weight: 700;
+        margin: 22px 0 18px;
+      }
+
+      .lead {
+        font-size: clamp(17px, 1.8vw, 20px);
+        color: var(--soft);
+        max-width: 40ch;
+        margin: 0 0 30px;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 999px;
+        padding: 12px 20px;
+        font-weight: 500;
+        font-size: 15px;
+        text-decoration: none;
+        box-shadow: inset 0 0 0 1px currentColor;
+        transition: transform 0.15s;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn.main {
+        background: var(--ink);
+        color: var(--bg);
+        box-shadow: none;
+      }
+
+      .btn svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin: 0 0 16px;
+      }
+
+      .feat {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        background: var(--card);
+        box-shadow: 0 0 0 1px var(--line);
+        overflow: hidden;
+        margin-bottom: 14px;
+      }
+
+      .feat.screens {
+        background: var(--cream);
+        box-shadow: none;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: 999px;
+        padding: 3px 10px;
+      }
+
+      .feat h3 {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        margin: 12px 0 6px;
+      }
+
+      .feat p {
+        color: var(--soft);
+        margin: 0 0 20px;
+      }
+
+      .feat img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+
+
+
+
+      footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      @media (max-width: 760px) {
+        .feat {
+          grid-template-columns: minmax(0, 1fr);
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tape" aria-hidden="true"></div>
+    <div class="wrap">
+      <header>
+        <h1>Rayan Outili</h1>
+        <p class="lead">Élève ingénieur logiciel en 5e année à Polytech Nice Sophia. Mon portfolio fait peau neuve, en attendant voici un projet en ligne.</p>
+        <div class="links">
+          <a class="btn main" href="mailto:rayan.outili@gmail.com">Me contacter</a>
+          <a class="btn" href="https://www.linkedin.com/in/rayan-outili/" target="_blank" rel="noopener"
+            ><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg>LinkedIn</a
+          >
+          <a class="btn" href="https://github.com/RayanOUTILI" target="_blank" rel="noopener"
+            ><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg>GitHub</a
+          >
+        </div>
+      </header>
+
+      <h2>En ligne</h2>
+
+      <article class="feat screens">
+        <div>
+          <span class="tag">En ligne</span>
+          <h3>Atlas Party</h3>
+          <p>Jeu de soirée sur la géographie : la TV affiche la partie, les téléphones servent de manette. 11 mini-jeux, de 2 à 8 joueurs, sans appli à installer.</p>
+          <a class="btn" href="https://atlas.rayan-outili.fr" target="_blank" rel="noopener">Jouer</a>
+        </div>
+        <a href="https://atlas.rayan-outili.fr" target="_blank" rel="noopener" tabindex="-1"
+          ><img src="atlas-party-ecrans.png" alt="L'accueil d'Atlas Party sur la TV et l'écran pour rejoindre sur téléphone"
+        /></a>
+      </article>
+
+      <footer>
+        <span>Rayan Outili</span>
+        <span>Nouvelle version en préparation</span>
+      </footer>
+    </div>
+  </body>
+</html>
